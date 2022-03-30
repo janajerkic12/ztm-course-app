@@ -24,6 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <input className='search-box' type='search' placeholder='serach monster...' />
         {
           this.state.monsters.map((monster) => {
             return (
