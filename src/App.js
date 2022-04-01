@@ -28,17 +28,17 @@ class App extends Component {
       return monster.name.toLocaleLowerCase().includes(this.state.searchField);
     })
 
+    const filterFunction = (event) => {
+      const searchField = event.target.value.toLocaleLowerCase();
+
+      this.setState(() => {
+        return {searchField};
+      })
+    }
+
     return (
       <div className="App">
-        <input className='search-box' type='search' placeholder='serach monster...' onChange={(event) => {
-          const searchField = event.target.value.toLocaleLowerCase();
-
-          
-
-          this.setState(() => {
-            return {searchField};
-          })
-        }}/>
+        <input className='search-box' type='search' placeholder='serach monster...' onChange={filterFunction}/>
         {
           filteredMonsters.map((monster) => {
             return (
