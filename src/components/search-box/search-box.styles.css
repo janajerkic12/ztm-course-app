@@ -1,4 +1,4 @@
-.search-monster {
+.search-box {
     -webkit-appearance: none;
     border: none;
     outline: none;
@@ -7,4 +7,5 @@
     line-height: 30px;
     margin-bottom: 30px;
   }
+
   
